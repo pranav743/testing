@@ -5,7 +5,7 @@ const cors = require('cors')
 
 
 app.use(cors());
-app.get('https://crud-app-three-blond.vercel.app/api/data', (req, res) => {
+app.get('/api/data', (req, res) => {
   const jsonData = {
     message: 'Hello from the server!',
     data: [
