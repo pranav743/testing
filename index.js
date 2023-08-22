@@ -5,11 +5,11 @@ const cors = require('cors')
 
 
 app.use(cors({
-  origin: [
-    'http://localhost:3000', // Allow requests from localhost:3000
-    'https://vercel.com/pranav743/crud-app',
-    'http://192.168.137.1:3000/' // Allow requests from this Vercel URL
-  ],
+  origin: '*'
+    // 'http://localhost:3000', // Allow requests from localhost:3000
+    // 'https://vercel.com/pranav743/crud-app',
+    // 'http://192.168.137.1:3000/' // Allow requests from this Vercel URL
+  ,
   methods: ["POST", "GET"],
   credentials: true
 }));
