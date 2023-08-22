@@ -4,7 +4,11 @@ const PORT = 5000;
 const cors = require('cors')
 
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://vercel.com/pranav743/crud-app'],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 app.get('/api/data', (req, res) => {
   const jsonData = {
     message: 'Hello from the server!',
