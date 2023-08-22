@@ -5,10 +5,15 @@ const cors = require('cors')
 
 
 app.use(cors({
-    origin: ['https://vercel.com/pranav743/crud-app'],
-    methods: ["POST", "GET"],
-    credentials: true
+  origin: [
+    'http://localhost:3000', // Allow requests from localhost:3000
+    'https://vercel.com/pranav743/crud-app',
+    'http://192.168.137.1:3000/' // Allow requests from this Vercel URL
+  ],
+  methods: ["POST", "GET"],
+  credentials: true
 }));
+
 app.get('/api/data', (req, res) => {
   const jsonData = {
     message: 'Hello from the server!',
